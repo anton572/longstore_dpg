@@ -7,7 +7,6 @@ class main(App):
         layout = BoxLayout(padding=10)
         layout.add_widget(Button(text='des'))
         layout.add_widget(Button(text='res'))
-        #B.bind(on_press=lambda a:print(5))
         return layout
 if __name__ == '__main__':
     main().run()

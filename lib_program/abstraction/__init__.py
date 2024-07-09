@@ -46,9 +46,9 @@ class Interference():
                         raise ErrorInterfeseNotInitMethod(cls,i)
         else:
             clas=cls.__mro__[1]
-            clas.__new__(clas)
 
-        return super().__new__(cls, *args, **kwargs)
+            clas.__new__(clas)
+        return super().__new__(cls)
 
 
 

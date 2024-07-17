@@ -1,12 +1,14 @@
 from SceenApp import SceenApp
-from model.screen.screen import screen
+from model.scree.screen.screen import screen
+from model.Model import ModelScreen
 class main(SceenApp):
     def __init__(self,**kwargs):
         super().__init__(**kwargs)
 
     def ModellInit(self):
-        sceen = screen('der','sor')
-        linkToScreen=self.ScreenSwaper.Add(sceen)
+        self.model_screen=ModelScreen(self.ScreenSwaper)
+        sceen = screen(model=self.model_screen)
+        linkToScreen=self.ScreenSwaper.add(sceen)
         # linkToScreen это функция при вызове которой мы переходим в sceen
         self.start+=linkToScreen
 if __name__ == '__main__':

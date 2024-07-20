@@ -1,12 +1,10 @@
-from abstract.screen import BasicScreen
-from model.Model import ModelScreen
+from abstract.screen import BasicSceen
 from kivy.uix.textinput import TextInput
 from kivy.uix.button import Button
-class screen(BasicScreen):
-    def __init__(self, setText,text,model:ModelScreen=None):
+class sceen(BasicSceen):
+    def __init__(self, setText,text,model):
         super().__init__(model)
         self.setText=setText
-
         self.TextInput=TextInput(text=text)
         self.Button=Button(text='close')
         self.Button.bind(on_press=lambda instans:self.close())

@@ -1,5 +1,5 @@
 from lib_program.Acthion import Acthion
-from abstract.screen import RelatedScreen,BasicScreen
+from abstract.screen import RelatedSceen,BasicSceen
 # лезь суда только в крайнем случае
 class ScreenSwaper():
     def __init__(self):
@@ -7,8 +7,8 @@ class ScreenSwaper():
         self.Swap=Acthion()
         self.__screenOld=None
         self.__related=[]
-    def addRelated(self,Screen:RelatedScreen):
-        if isinstance(Screen,RelatedScreen):
+    def addRelated(self, Screen:RelatedSceen):
+        if isinstance(Screen, RelatedSceen):
             raise ValueError("not RelatedScreen")
         self.__related.append(self.__screenOld)
         self.__setScreen(Screen)
@@ -16,8 +16,8 @@ class ScreenSwaper():
         obj=self.__related[-1]
         self.__related.remove(obj)
         self.__setScreen(obj)
-    def add(self, ScreenClass:BasicScreen):
-        if type(ScreenClass)==BasicScreen:
+    def add(self, ScreenClass:BasicSceen):
+        if type(ScreenClass)==BasicSceen:
             raise ValueError("not BasicScreen")
         name=id(ScreenClass)
         self.__screen[name] = ScreenClass

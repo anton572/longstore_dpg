@@ -1,9 +1,10 @@
-from abstract.screen import BasicScreen
+from abstract.screen import BasicSceen
 from model.Model import ModelScreen
 from kivy.uix.boxlayout import BoxLayout
-from model.Atribut import Parameters
-from kivy.uix.checkbox import CheckBox
-class screen(BasicScreen):
+from viw.Atribut import Parameters
+
+
+class sceen(BasicSceen):
     def __init__(self, model:ModelScreen=None):
         super().__init__(model)
         self.el=BoxLayout(padding=2,orientation='vertical')

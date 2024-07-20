@@ -1,8 +1,8 @@
 from kivy.core.window import Window
 Window.size = (94*6, 151*6)
 from SceenApp import SceenApp
-from model.scree.screen.screen import screen
-from model.scree.atributs.screen import screen as Atribut
+from model.sceen.test.sceen import sceen as test
+from model.sceen.atributs.sceen import sceen as Atribut
 from model.Model import ModelScreen
 from model.Player.Player import Player
 class main(SceenApp):
@@ -11,9 +11,9 @@ class main(SceenApp):
     def ModellInit(self):
 
         self.model_screen=ModelScreen(ScreenSwaper=self.ScreenSwaper,Massage=self.massage)
-        sceen = screen(model=self.model_screen)
+        sceen = test(model=self.model_screen)
         sceenAtribut = Atribut(model=self.model_screen)
-        linkToScreen=self.ScreenSwaper.add(sceen)
+        linkToTest=self.ScreenSwaper.add(sceen)
         linkToAtribut=self.ScreenSwaper.add(sceenAtribut)
         # linkToScreen это функция при вызове которой мы переходим в sceen
         self.start+=linkToAtribut

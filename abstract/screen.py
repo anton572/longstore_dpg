@@ -1,11 +1,10 @@
 from lib_program.abstraction import Interference
-from model.Model import ModelScreen
 from kivy.uix.boxlayout import BoxLayout
 # интерфейс сценны обязан наледовать от него сценны
-class IScreen(Interference):
+class ISceen(Interference):
     def GetSerf(self):pass
-class BasicScreen(IScreen):
-    def __init__(self, model:ModelScreen=None):
+class BasicSceen(ISceen):
+    def __init__(self, model):
         self.model=model
         layout = BoxLayout(padding=10,orientation='vertical')
         self.__layout=layout
@@ -15,4 +14,4 @@ class BasicScreen(IScreen):
     #возврощает видимость сценны
     def GetSerf(self):
         return self.__layout
-class RelatedScreen(BasicScreen):pass
+class RelatedSceen(BasicSceen):pass

@@ -1,6 +1,6 @@
-from abstract.screen import BasicScreen
+from abstract.screen import BasicSceen
 from model.Model import ModelScreen
-class screen(BasicScreen):
+class sceen(BasicSceen):
     def __init__(self, model:ModelScreen=None):
         super().__init__(model)
 

@@ -4,7 +4,7 @@ from kivy.uix.boxlayout import BoxLayout
 from viw.massage import Massage
 from model.ScreenSwaper import ScreenSwaper
 from lib_program.Acthion import Acthion
-from abstract.screen import IScreen
+from abstract.screen import ISceen
 class SceenApp(App):
     def __init__(self,**kwargs):
         super().__init__(**kwargs)
@@ -20,7 +20,7 @@ class SceenApp(App):
         self.grup.add_widget(self.massage)
 
     def ModellInit(self):pass
-    def __Swap(self,OldSceen:IScreen,NewSceen:IScreen):
+    def __Swap(self, OldSceen:ISceen, NewSceen:ISceen):
         """меняет сценны"""
         self.layout.add_widget(NewSceen.GetSerf())
         if OldSceen!=None:

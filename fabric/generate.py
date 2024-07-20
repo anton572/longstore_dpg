@@ -2,10 +2,10 @@ def formul(text:str):
     text=str(text)
     indax=0
     sil=[]
-    while '[math]' in text[indax:]:
+    while '[' in text[indax:]:
         try:
-            indax=text.index('[math]',indax)
-            indax1=text.index('[/math]',indax+1)+7
+            indax=text.index('[',indax)
+            indax1=text.index(']',indax+1)+1
             sil.append((indax,indax1))
             indax=indax1
         except:
@@ -14,7 +14,7 @@ def formul(text:str):
     se={}
     for i in sil:
         t=text[i[0]:i[1]]
-        se[t]=t[6:-7]
+        se[t]=t[1:-1]
     for i in se:
         t=se[i]
         if '{' in t:

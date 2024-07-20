@@ -15,7 +15,7 @@ class main(SceenApp):
         linkToScreen=self.ScreenSwaper.add(sceen)
         linkToAtribut=self.ScreenSwaper.add(sceenAtribut)
         # linkToScreen это функция при вызове которой мы переходим в sceen
-        self.start+=linkToAtribut
+        self.start+=linkToScreen
 if __name__ == '__main__':
 
 

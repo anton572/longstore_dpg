@@ -9,9 +9,9 @@ class fabric():
         layout=LableConstruct(text)
         def set(text):
             layout.setText(text)
-        def create(instans):
+        def createSceen(instans):
 
             input=input_formul(set,layout.getText(),model=self.model)
             self.model.addRelated(input)
-        layout.bind(on_press=create)
+        layout.bind(on_press=createSceen)
         return layout

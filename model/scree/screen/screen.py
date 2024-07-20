@@ -11,7 +11,7 @@ class screen(BasicScreen):
         super().__init__(model)
         self.fabric=fabric(model)
         self.math=math()
-        fo="""frttrewa [math]{damage}1d6[/math] dfge [math]1d4 [/math] t"""
+        fo="""frttrewa [{damage}1d6] dfge [1d4] t"""
         label = self.fabric.Lableformul(fo)
         label.clic_math+=self.on_ref_press
         self._add(label)

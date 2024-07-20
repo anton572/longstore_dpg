@@ -7,7 +7,7 @@ class IScreen(Interference):
 class BasicScreen(IScreen):
     def __init__(self, model:ModelScreen=None):
         self.model=model
-        layout = BoxLayout(padding=10)
+        layout = BoxLayout(padding=10,orientation='vertical')
         self.__layout=layout
     def _add(self,element):
         self.__layout.add_widget(element)

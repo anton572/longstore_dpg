@@ -2,13 +2,13 @@ from kivy.app import App
 from kivy.uix.floatlayout import FloatLayout
 from kivy.uix.boxlayout import BoxLayout
 from viw.massage import Massage
-import model
+from model.ScreenSwaper import ScreenSwaper
 from lib_program.Acthion import Acthion
 from abstract.screen import IScreen
 class SceenApp(App):
     def __init__(self,**kwargs):
         super().__init__(**kwargs)
-        self.ScreenSwaper=model.ScreenSwaper()
+        self.ScreenSwaper=ScreenSwaper()
         self.ScreenSwaper.Swap+=self.__Swap
         self.start=Acthion()
         self.massage=Massage()
